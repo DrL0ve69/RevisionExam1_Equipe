@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RevisionExam1_Equipe.Models;
 
 namespace RevisionExam1_Equipe.Controllers
 {
@@ -10,7 +11,7 @@ namespace RevisionExam1_Equipe.Controllers
         }
         public IActionResult Catalogue()
         {
-            return View();
+            return View(DB_Livres_ViewModel.listeLivres);
         }
     }
 }
