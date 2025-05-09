@@ -1,8 +1,7 @@
-﻿namespace RevisionExam1_Equipe.Models.ViewModel
+﻿namespace RevisionExam1_Equipe.Models.ViewModel;
+
+public class Panier
 {
-    public class Panier
-    {
-        public Client client { get; set; }
-        public List<LivreModel> ListePanier { get; set; }
-    }
+    public Client Client { get; set; }
+    public List<LivreModel> ListePanier { get; set; }
 }
