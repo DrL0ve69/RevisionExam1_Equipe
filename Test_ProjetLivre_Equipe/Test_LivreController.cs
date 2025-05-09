@@ -34,6 +34,8 @@ namespace Test_ProjetLivre_Equipe
             var result = controller.TrouverLivre(111);
             // Assert
             Assert.IsType<ContentResult>(result);
+            var content = result as ContentResult;
+            Assert.Equal($"Le livre ayant le ID:{111} n'est pas disponible!", content.Content);
         }
     }
 }
