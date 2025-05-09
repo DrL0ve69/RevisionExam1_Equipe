@@ -2,7 +2,7 @@
 {
     public class DB_Clients_ViewModel
     {
-        public static List<Client> listeClients = new List<Client>()
+        public static List<Client> ListeClients = new List<Client>()
         {
             new Client(1, "Dupont", "Jean"),
             new Client(2, "Martin", "Marie"),
