@@ -5,5 +5,26 @@
 
 <h1>Panier</h1>
 
-<p>@Model.client.NumClient @Model.client.Nom @Model.client.Prenom</p>
+<h2>Bienvenue @Model.client.Prenom @Model.client.Nom !</h2>
+<p>Numéro Client : @Model.client.NumClient</p>
+
+<h2>Contenu du panier</h2>
+
+<table class="table">
+	<tr>
+		<th>ID</th>
+		<th>Titre du Livre</th>
+		<th>Prix</th>
+	</tr>
+	@foreach (var item in Model.ListePanier)
+	{
+		<tr>
+			<td>@item.Id</td>
+			<td>@item.Titre</td>
+			<td>@item.Prix</td>
+		</tr>
+	}
+</table>
+
+
 
