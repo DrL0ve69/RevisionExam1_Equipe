@@ -32,5 +32,11 @@ app.MapControllerRoute(
     pattern: "{controller=Livre}/{id}")
     .WithStaticAssets();
 
+// route pour le panier avec les ids des livres
+app.MapControllerRoute(
+    name: "default",
+    defaults: new { controller = "Panier", action = "Panier"},
+    pattern: "{controller}/{action}/{idClient}/{idLivre1?}/{idLivre2?}/{idLivre3?}")
+    .WithStaticAssets();
 
 app.Run();
