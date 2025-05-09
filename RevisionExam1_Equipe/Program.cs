@@ -23,7 +23,7 @@ app.MapStaticAssets();
 app.MapControllerRoute(
     name: "default",
     defaults: new { controller = "Livre", action = "Catalogue",},
-    pattern: "{controller=Livre}/{action=Catalogue}")
+    pattern: "{controller=Livre}")
     .WithStaticAssets();
 
 app.MapControllerRoute(

@@ -11,11 +11,11 @@ namespace RevisionExam1_Equipe.Controllers
         }
         public IActionResult Catalogue()
         {
-            return View(DB_Livres_ViewModel.listeLivres);
+            return View(DB_Livres_ViewModel.ListeLivres);
         }
         public IActionResult TrouverLivre(int id)
         {
-            LivreModel? livre = DB_Livres_ViewModel.listeLivres.FirstOrDefault(l => l.Id == id);
+            LivreModel? livre = DB_Livres_ViewModel.ListeLivres.FirstOrDefault(l => l.Id == id);
             if (livre != null)
             {
                 return View(livre);

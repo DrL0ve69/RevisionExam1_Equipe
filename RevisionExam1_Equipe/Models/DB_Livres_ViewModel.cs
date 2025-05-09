@@ -2,7 +2,7 @@
 
 public static class DB_Livres_ViewModel
 {
-    public static List<LivreModel> listeLivres = new List<LivreModel>() 
+    public static List<LivreModel> ListeLivres { get; set; } = new List<LivreModel>() 
     {
         new LivreModel(1, "Le Petit Prince", 10.99),
         new LivreModel(2, "1984", 8.99),
