@@ -8,5 +8,9 @@ namespace RevisionExam1_Equipe.Controllers
         {
             return View();
         }
+        public IActionResult Catalogue()
+        {
+            return View();
+        }
     }
 }
