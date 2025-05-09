@@ -22,7 +22,7 @@ namespace RevisionExam1_Equipe.Controllers
             }
             else
             {
-                return NotFound();
+                return Content("Le livre n'est pas disponible!");
             }
         }
     }
