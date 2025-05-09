@@ -2,7 +2,7 @@
 {
     public class Panier
     {
-        public LivreModel Livre { get; set; }
+        public Client client { get; set; }
         public List<LivreModel> ListePanier { get; set; }
     }
 }
