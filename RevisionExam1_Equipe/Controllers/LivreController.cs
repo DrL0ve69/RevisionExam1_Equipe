@@ -22,7 +22,7 @@ namespace RevisionExam1_Equipe.Controllers
             }
             else
             {
-                return Content("Le livre n'est pas disponible!");
+                return Content($"Le livre ayant le ID:{id} n'est pas disponible!");
             }
         }
     }
