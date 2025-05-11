@@ -20,12 +20,14 @@ app.UseAuthorization();
 
 app.MapStaticAssets();
 
+// Route pour l'action Catalogue() du controlleur LivreController
 app.MapControllerRoute(
     name: "default",
     defaults: new { controller = "Livre", action = "Catalogue",},
     pattern: "{controller=Livre}")
     .WithStaticAssets();
 
+// Route pour l'action TrouverLivre(id) du controlleur LivreController
 app.MapControllerRoute(
     name: "default",
     defaults: new { controller = "Livre", action = "TrouverLivre", },
