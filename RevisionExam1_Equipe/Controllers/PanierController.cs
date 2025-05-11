@@ -14,9 +14,9 @@ namespace RevisionExam1_Equipe.Controllers
         {
             // Récupérer le client
             Client? client = DB_Clients_ViewModel.ListeClients.FirstOrDefault(c => c.NumClient == idClient);
-            LivreModel? livre1 = null;
-            LivreModel? livre2 = null;
-            LivreModel? livre3 = null;
+            LivreModel livre1 = new();
+            LivreModel livre2 = new();
+            LivreModel livre3 = new();
             // Récupérer les livres
 
 
@@ -27,7 +27,7 @@ namespace RevisionExam1_Equipe.Controllers
                 panier.Client = client;
                 panier.ListePanier = new List<LivreModel>();
 
-                // Ajouter les livres au panier
+                // Ajouter les livres au panier, pourrait être optimisé dans un loop
                 if (idLivre1 != null && DB_Livres_ViewModel.ListeLivres.FirstOrDefault(l => l.Id == idLivre1) != null)
                 {
                     livre1 = DB_Livres_ViewModel.ListeLivres.FirstOrDefault(l => l.Id == idLivre1);
