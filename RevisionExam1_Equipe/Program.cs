@@ -41,4 +41,9 @@ app.MapControllerRoute(
     pattern: "{controller}/{action}/{idClient}/{idLivre1?}/{idLivre2?}/{idLivre3?}")
     .WithStaticAssets();
 
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller}/{action}")
+    .WithStaticAssets();
+
 app.Run();

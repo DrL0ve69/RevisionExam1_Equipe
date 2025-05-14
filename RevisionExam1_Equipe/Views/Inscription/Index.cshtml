@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	ViewBag.Title = "Inscriptions";
+}
+<h1>Inscriptions</h1>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Liste des Inscriptions</h2>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Nom</th>
+						<th>Prénom</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var inscription in Model)
+					{
+						<tr>
+							<td>@inscription.Nom</td>
+							<td>@inscription.Prenom</td>
+							<td>
+								<a href="@Url.Action("Edit", "Inscription", new { id = inscription.NumClient })" class="btn btn-primary">Modifier</a>
+								<a href="@Url.Action("Delete", "Inscription", new { id = inscription.NumClient })" class="btn btn-danger">Supprimer</a>
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+			<a href="@Url.Action("Create", "Inscription")" class="btn btn-success">Ajouter une Inscription</a>
+			@if (TempData["Message"] != null)
+			{
+				<div class="alert alert-success">
+					@TempData["Message"]
+				</div>
+			}
+
+			@if (TempData["Error"] != null)
+			{
+			<div class="alert alert-danger">
+				@TempData["Error"]
+			</div>
+			}
+		</div>
+	</div>
+</div>
