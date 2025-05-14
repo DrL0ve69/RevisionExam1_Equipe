@@ -1,7 +1,38 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@{
-}
+@model RevisionExam1_Equipe.Models.Client
 <h1>Modifier client</h1>
+@using (Html.BeginForm("Edit", "Inscription", FormMethod.Post))
+{
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th colspan="2" align="center">Person Details</th>
+        </tr>
+        <tr>
+            <td>PersonId: </td>
+            <td>
+                @Html.TextBoxFor(m => m.NumClient)
+            </td>
+        </tr>
+        <tr>
+            <td>Nom: </td>
+            <td>
+                @Html.TextBoxFor(m => m.Nom)
+            </td>
+        </tr>
+
+        <tr>
+            <td>Prénom: </td>
+            <td>
+                @Html.TextBoxFor(m => m.Prenom)
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+}
 <a href="@Url.Action("Index", "Inscription")">Retour à la liste</a>
