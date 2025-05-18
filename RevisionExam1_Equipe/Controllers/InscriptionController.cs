@@ -42,8 +42,8 @@ namespace RevisionExam1_Equipe.Controllers
             string prenom = client.Prenom;
             if (DB_Clients_ViewModel.ListeClients.Any(c => c.NumClient == id))
             {
-                DB_Clients_ViewModel.ListeClients.RemoveAll(c => c.NumClient == id);
-                DB_Clients_ViewModel.ListeClients.Add(client);
+                int index = DB_Clients_ViewModel.ListeClients.FindIndex(c => c.NumClient == id);
+                DB_Clients_ViewModel.ListeClients[index]= client;
                 return RedirectToAction("Index");
             }
             else
